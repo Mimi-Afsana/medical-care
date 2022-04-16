@@ -1,0 +1,32 @@
+import React from "react";
+
+const Service = ({ service }) => {
+  const { name, picture, about, balance } = service;
+  return (
+    <div className="gx-4 col-12 col-lg-4">
+      <div className="card ">
+        <img
+          src={picture}
+          className="card-img-top"
+          alt="..."
+          height="300px"
+          className=" rounded"
+        />
+        <div className="card-body">
+          <h5 className="card-title">{name}</h5>
+          <p className="card-text">
+            {about}
+          </p>
+          <p>
+            <span className="h4">Price:</span> {balance}
+          </p>
+          <button className="bg-success text-white border-0 rounded-pill fw-bold px-5">
+            Check Out
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Service;

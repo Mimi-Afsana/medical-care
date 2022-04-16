@@ -1,12 +1,12 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import img1 from "../../../images/pic1.jpg";
+import img1 from "../../../images/pic1 (1).png";
 import img2 from "../../../images/pic2.jpg";
 import img3 from "../../../images/pic3.jpg";
 
 const Carusel = () => {
   return (
-    <div>
+    <div className="container mt-5">
       <Carousel>
         <Carousel.Item interval={1000}>
           <img
