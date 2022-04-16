@@ -6,8 +6,14 @@ import CustomLink from "../../CustomLink/CustomLink";
 import logo from "../../images/logo.jpg";
 const Header = () => {
   return (
-    <div>
-      <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+    <>
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="primary"
+        sticky="top"
+        variant="dark"
+      >
         <Container>
           <Navbar.Brand as={CustomLink} to="/">
             <img src={logo} height="40px" className="border rounded" alt="" />
@@ -40,7 +46,7 @@ const Header = () => {
       </Navbar>
 
       <Outlet />
-    </div>
+    </>
   );
 };
 
