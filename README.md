@@ -1,4 +1,21 @@
-# Getting Started with Create React App
+# Darudul Islam
+
+## Live website link:
+
+click here: https://storied-souffle-assignment-9.netlify.app/reviews/
+
+# Project-Overview
+
+---
+
+- This is a website where single doctor provide different services and doctor also go for home visit for doing goods his patients.
+- On services section there is a specific button and clicking on the button will take the user to the Checkout route. And this route is protected route.
+- Make footer and footer is common for all page.
+- On blogs page describe three question. These are: 1.Difference between authorization and authentication? 2.Why are you using firebase? What other options do you have to implement authentication? 3.What other services does firebase provide other than authentication ?
+- On about page describe about my goal and And how i will work hard to achieve my goal.
+- On login page user can login and also toggle sign in page.
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +84,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

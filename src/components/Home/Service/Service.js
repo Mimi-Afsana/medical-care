@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 
 const Service = ({ service }) => {
-  const { name, picture, about, balance } = service;
+  const { name, picture, about, balance,id } = service;
   const navigate = useNavigate();
   const sendCheckOut = () => {
     navigate("/checkout");

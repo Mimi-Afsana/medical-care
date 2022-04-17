@@ -19,27 +19,32 @@ const Header = () => {
         collapseOnSelect
         expand="lg"
         bg="primary"
-        sticky="top"
+        // sticky="top"
         variant="dark"
       >
         <Container>
           <Navbar.Brand className="d-flex align-items-center me-5" href="#home">
             <img src={logo} height="40px" className="border rounded" alt="" />
-            <p className="ms-2">Darudul Islam</p>
+            Darudul Islam
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto ms-5">
-              <Nav.Link className="text-white" as={CustomLink} to="/">
+              <Nav.Link className="text-white" as={CustomLink} to="/home">
                 Home
               </Nav.Link>
               <Nav.Link className="text-white" as={CustomLink} to="/blogs">
                 Blogs
               </Nav.Link>
+
+              <Nav.Link className="text-white" as={CustomLink} to="service">
+                Service
+              </Nav.Link>
               <Nav.Link className="text-white" as={CustomLink} to="/about">
                 About
               </Nav.Link>
             </Nav>
+            <p className="text-white me-4 mt-3">{user?.email}</p>
             <Nav className="bg-warning  fw-bold border-0 rounded-pill px-3">
               {user ? (
                 <button

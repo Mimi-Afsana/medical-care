@@ -13,6 +13,7 @@ import { useNavigate } from "react-router";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState();
   const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
@@ -43,6 +44,14 @@ const Signup = () => {
 
   const handleRegister = (event) => {
     event.preventDefault();
+    if (password !== confirmPassword) {
+      setErrors(" Passwords did't match");
+      return;
+    }
+    if (password.length < 6) {
+      setErrors("Password must be 6 characters or longer");
+      return;
+    }
     createUserWithEmailAndPassword(email, password);
   };
   return (
@@ -84,6 +93,7 @@ const Signup = () => {
         <Form.Group className="mb-4" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
+        <p className="text-danger">{errors}</p>
         <Button variant="primary" type="submit">
           Sign Up
         </Button>

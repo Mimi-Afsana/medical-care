@@ -6,7 +6,11 @@ import img3 from "../../../images/pic3.jpg";
 
 const Carusel = () => {
   return (
-    <div className=" mt-5">
+    <div className=" mt-3">
+      <h3 className="text-center mb-3">
+        Always i tried to give{" "}
+        <span className="d-block text-success">best service</span>{" "}
+      </h3>
       <Carousel>
         <Carousel.Item interval={1000}>
           <img

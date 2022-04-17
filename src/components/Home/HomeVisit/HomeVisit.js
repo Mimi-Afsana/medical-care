@@ -33,7 +33,13 @@ const HomeVisit = () => {
         <h4>8 pm – 10 pm - TK 1000</h4>
         <p>Available only Saturday and Sunday</p>
         <button className="bg-success text-white border-0 rounded-pill fw-bold px-5">
-          <img height='30px' width='40px' className='mt-2' src={"https://i.ibb.co/mNc3HKv/Png-Item-1093378.png"} alt="" />{" "}
+          <img
+            height="30px"
+            width="40px"
+            className="mt-2"
+            src={"https://i.ibb.co/mNc3HKv/Png-Item-1093378.png"}
+            alt=""
+          />{" "}
           Chat Now
         </button>
       </div>
