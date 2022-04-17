@@ -15,8 +15,9 @@ const Header = () => {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand as={CustomLink} to="/">
+          <Navbar.Brand className="d-flex align-items-center me-5" href="#home">
             <img src={logo} height="40px" className="border rounded" alt="" />
+            <p className="ms-2">Darudul Islam</p>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
