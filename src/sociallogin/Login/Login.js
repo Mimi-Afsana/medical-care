@@ -23,8 +23,12 @@ const Login = () => {
     useSendPasswordResetEmail(auth);
   const resetpass = async (event) => {
     setEmail(event.target.value);
-    await sendPasswordResetEmail(email);
-    toast("sent email");
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("Sent email");
+    } else {
+      toast("please enter your email address");
+    }
   };
 
   const location = useLocation();

@@ -1,8 +1,8 @@
-# Darudul Islam
+# MEDICAL CARE
 
 ## Live website link:
 
-click here: https://storied-souffle-assignment-9.netlify.app/reviews/
+click here: https://single-doctor-website.web.app/
 
 # Project-Overview
 
@@ -14,7 +14,8 @@ click here: https://storied-souffle-assignment-9.netlify.app/reviews/
 - On blogs page describe three question. These are: 1.Difference between authorization and authentication? 2.Why are you using firebase? What other options do you have to implement authentication? 3.What other services does firebase provide other than authentication ?
 - On about page describe about my goal and And how i will work hard to achieve my goal.
 - On login page user can login and also toggle sign in page.
-
+- In this website i use css framework bootstrap and react bootstrap, also use react library, react router, react tostify, Firebase Google-backed application development
+, firebase hooks.
 <!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

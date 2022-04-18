@@ -24,7 +24,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand className="d-flex align-items-center me-5 fw-bold" href="#home">
-            MEDICAL HOSPITAL
+            MEDICAL CARE
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
