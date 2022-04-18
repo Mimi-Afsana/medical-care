@@ -9,6 +9,8 @@ import auth from "../../firebase.init";
 import Loading from "../../Loading/Loading";
 import SocialLogin from "../Social Login/SocialLogin";
 import { useNavigate } from "react-router";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from "@firebase/auth";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -19,6 +21,10 @@ const Signup = () => {
 
   const navigateLogin = () => {
     navigate("/login");
+  };
+  const [user1, loading1] = useAuthState(auth);
+  const logout = () => {
+    signOut(auth);
   };
 
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -91,9 +97,23 @@ const Signup = () => {
           />
         </Form.Group>
         <p className="text-danger">{errors}</p>
-        <Button variant="primary" type="submit">
-          Sign Up
-        </Button>
+        {user ? (
+          <button
+            className="bg-warning  fw-bold border-0 rounded-pill px-3"
+            onClick={logout}
+          >
+            Sign out
+          </button>
+        ) : (
+          <button
+            className="bg-primary text-white  fw-bold border-0 rounded-pill px-4 py-2"
+            eventKey={2}
+            as={Link}
+            to="/home"
+          >
+            signup
+          </button>
+        )}
         <p className="mt-4">
           If sign up already?{" "}
           <Link

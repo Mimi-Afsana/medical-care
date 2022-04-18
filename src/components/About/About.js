@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 const About = () => {
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 my-goal">
       <div className="about-me">
         <div>
           <img
@@ -17,11 +17,8 @@ const About = () => {
             <h2 className="mt-5 mb-5">Darudul Islam</h2>
             <h4 className="text-primary">About my goal.</h4>
             <p>
-              My first and most important goal is i want to finish programming
-              hero course on time. After finish this course my second target is
-              make some website how much i can. I want to be a web developer. I
-              want to be a fronted developer and later my aim is i am learning
-              backend also.
+              My first and most important goal and another way of saying is only aim in my life to enhance my knowledge on medical seience and by using that knowledge to give free medical service to everybody. Because I believe every human being got right to get good treatment. 
+              
             </p>
           </div>
           <div>
@@ -29,12 +26,7 @@ const About = () => {
               And how you will work hard to achieve your goal.
             </h4>
             <p>
-              Really i work hard to acheive this goal. Always i tried to keep
-              myself motivated. Everyday i make a plan how can i finish my all
-              work and step by step finish my work. Manage my time effecttively.
-              Working continuously make me feel tired and inactive that is wy
-              take short break between work. My mobile phone keep away from my
-              work.
+              I know that what I think of it's not nesserary to everybody think the same way. I also it's really hard to achieve my goal. I am working hard on it to make it possible as much as I can. For that we build a doctor community with those people who are thinking same like me. I strongly believe slowly but surely one day our community will grow up and we can help more people. 
             </p>
           </div>
         </div>

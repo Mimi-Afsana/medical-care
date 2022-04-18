@@ -12,6 +12,7 @@ import Loading from "../../Loading/Loading";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -58,10 +59,10 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
   return (
-    <div className="container w-50 mx-auto">
+    <div className="container w-50 mx-auto col-12">
       <Form
         onSubmit={handleRegister}
-        className="p-5 rounded mt-5 bg-success p-2 text-dark bg-opacity-10 "
+        className="p-5 rounded mt-5 bg-success p-2 text-dark bg-opacity-10"
       >
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

@@ -25,7 +25,7 @@ const Service = ({ service }) => {
           </p>
           <button
             onClick={sendCheckOut}
-            className="bg-success text-white border-0 rounded-pill fw-bold px-5"
+            className="bg-success text-white border-0 rounded-pill fw-bold px-5 py-3"
           >
             Check Out
           </button>

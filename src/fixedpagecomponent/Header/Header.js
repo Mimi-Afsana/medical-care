@@ -35,13 +35,14 @@ const Header = () => {
               <Nav.Link className="text-white" as={CustomLink} to="/blogs">
                 Blogs
               </Nav.Link>
-
-              <Nav.Link className="text-white" as={CustomLink} to="service">
-                Service
-              </Nav.Link>
               <Nav.Link className="text-white" as={CustomLink} to="/about">
                 About
               </Nav.Link>
+
+              <Nav.Link className="text-white" as={CustomLink} to="/contact">
+                Contact Me
+              </Nav.Link>
+              
             </Nav>
             <p className="text-white me-4 mt-3">{user?.email}</p>
             <Nav className="bg-warning  fw-bold border-0 rounded-pill px-3">

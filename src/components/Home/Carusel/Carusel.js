@@ -7,14 +7,15 @@ const Carusel = () => {
       <div className="describe container mt-3 ">
         <div>
           <img
-            className="w-100 rounded"
+            className="rounded"
+            width="450"
             height="400px"
-            src={"https://i.ibb.co/bLm9Qnp/Islam1.jpg"}
+            src={"https://i.ibb.co/NpvprTp/islam-photo-for-assmnt-10-removebg-preview123.png"}
             alt=""
           />
         </div>
         <div>
-          <h4 className="text-primary mb-5">Dr Darudul Islam</h4>
+          <h4 className="text-primary mb-5 mt-5">Dr. Darudul Islam</h4>
           <h5 className="text-primary mb-2">SPECIALTY</h5>
           <p className="h6 mb-5">Orthopaedic Surgery</p>
           <h4 className="text-primary mb-2">SUB SPECIALTY</h4>
