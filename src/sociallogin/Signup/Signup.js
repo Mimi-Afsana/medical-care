@@ -90,9 +90,6 @@ const Signup = () => {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-4" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
         <p className="text-danger">{errors}</p>
         <Button variant="primary" type="submit">
           Sign Up

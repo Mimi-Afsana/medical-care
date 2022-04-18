@@ -15,18 +15,13 @@ const About = () => {
         </div>
         <div>
           <div>
-            <h4 className='text-primary'>About my goal</h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              quia, error iure commodi enim reprehenderit recusandae tempore
-              rerum quas, nemo quae excepturi sint eaque, minima quisquam
-              dolorem alias repellat id.
-            </p>
+            <h4 className="text-primary">About my goal</h4>
+            <p>ghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
           </div>
           <div>
-            <h4 className='text-primary'>And how you will work hard to achieve your goal.
-
-</h4>
+            <h4 className="text-primary">
+              And how you will work hard to achieve your goal.
+            </h4>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
               quia, error iure commodi enim reprehenderit recusandae tempore

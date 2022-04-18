@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import SocialLogin from "../Social Login/SocialLogin";
-import { useNavigate } from "react-router";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useLocation, useNavigate } from "react-router";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import Loading from "../../Loading/Loading";
 
@@ -13,17 +16,31 @@ const Login = () => {
   const navigate = useNavigate();
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+
+  const [sendPasswordResetEmail, sending, erroring] =
+    useSendPasswordResetEmail(auth);
+  const resetpass = async (event) => {
+    setEmail(event.target.value);
+    await sendPasswordResetEmail(email);
+    alert("sent email");
+  };
+
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+  if (user) {
+    console.log("user", user);
+    navigate(from, { replace: true });
+  }
+
   if (loading) {
     return <Loading></Loading>;
   }
-  if (user) {
-    console.log("user", user);
-    navigate("/home");
-  }
+
   let errorElement;
   if (error) {
     errorElement = <p className="text-danger">Error: {error?.message}</p>;
   }
+
   const emailBlur = (event) => {
     setEmail(event.target.value);
   };
@@ -35,10 +52,10 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
   return (
-    <div>
+    <div className="container w-50 mx-auto">
       <Form
         onSubmit={handleRegister}
-        className="w-50 mx-auto p-5 rounded mt-5 bg-success p-2 text-dark bg-opacity-10 "
+        className="p-5 rounded mt-5 bg-success p-2 text-dark bg-opacity-10 "
       >
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -49,7 +66,6 @@ const Login = () => {
             required
           />
         </Form.Group>
-
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
@@ -59,25 +75,31 @@ const Login = () => {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-4" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
         {errorElement}
-
         <Button variant="primary" type="submit">
           Login
-        </Button>
-        <p className="mt-4">
-          New to Come here?{" "}
-          <Link
-            to="/signup"
-            className="text-primary pe-auto text-decoration-none"
-          >
-            Please SignUp
-          </Link>{" "}
-        </p>
+        </Button>{" "}
       </Form>
-
+      <p className="mt-4 ">
+        New to Come here?{" "}
+        <Link to="/signup" className="text-primary  text-decoration-none ">
+          Please SignUp
+        </Link>{" "}
+      </p>
+      <p>
+        Forget Password?
+        <button
+          onClick={resetpass}
+          // onClick={async () => {
+          //   await sendPasswordResetEmail(email);
+          //   alert("Sent email");
+          // }}
+          className="btn btn-link text-primary text-decoration-none"
+        >
+          {" "}
+          Reset Password
+        </button>
+      </p>
       <SocialLogin></SocialLogin>
     </div>
   );

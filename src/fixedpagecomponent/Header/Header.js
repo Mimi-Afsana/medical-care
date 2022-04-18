@@ -24,7 +24,6 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand className="d-flex align-items-center me-5" href="#home">
-            <img src={logo} height="40px" className="border rounded" alt="" />
             Darudul Islam
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
