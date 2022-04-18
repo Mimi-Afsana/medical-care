@@ -2,14 +2,14 @@ import React from "react";
 import { useNavigate } from "react-router";
 
 const Service = ({ service }) => {
-  const { name, picture, about, balance,id } = service;
+  const { name, picture, about, balance, id } = service;
   const navigate = useNavigate();
   const sendCheckOut = () => {
     navigate("/checkout");
   };
   return (
-    <div className="gx-4 col-12 col-lg-4">
-      <div className="card ">
+    <div className="gx-4 col-12 col-lg-4 ">
+      <div className="card">
         <img
           src={picture}
           className="card-img-top"

@@ -4,18 +4,18 @@ const Fotter = () => {
   // const date = new Date();
   // const year = date.getfullYear();
   return (
-    <div className="bg-dark pt-5 mt-5 ps-5 pb-3">
-      <div className="footer-style">
+    <div className="bg-dark pt-5 mt-5 ps-5 pb-3 ">
+      <div className="footer-style container">
         <div className="text-white">
           <h3>Explore</h3>
           <p>Home</p>
           <p>Services</p>
+          <p>Blogs</p>
           <p>About</p>
         </div>
         <div className="text-white">
-          <p>Envoy So. California</p>
-          <p>34 Tesla, Ste 100</p>
-          <p>USA 566777</p>
+          <p> 8, Jalan Bukit Pantai, 59100 Kuala Lumpur,</p>
+          <p>Malaysia</p>
 
           <h4>Contact me</h4>
           <p>darudulislam@gmail.com</p>
@@ -34,7 +34,10 @@ const Fotter = () => {
           <p>Policy</p>
         </div>
       </div>
-      <p className="text-white">@ 2022. All reserved</p>
+      <p className="text-white container">
+        Copyright © 2022 Pantai Medical Centre Sdn Bhd. All Rights Reserved.
+        KKLIU 2567/2020
+      </p>
     </div>
   );
 };

@@ -1,56 +1,54 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
-import img1 from "../../../images/pic1 (1).png";
-import img2 from "../../../images/pic2.jpg";
-import img3 from "../../../images/pic3.jpg";
+import "./Carusel.css";
 
 const Carusel = () => {
   return (
-    <div className=" mt-3">
-      <h3 className="text-center mb-3">
-        Always i tried to give{" "}
-        <span className="d-block text-success">best service</span>{" "}
-      </h3>
-      <Carousel>
-        <Carousel.Item interval={1000}>
+    <div>
+      <div className="describe container mt-3 ">
+        <div>
           <img
-            className="d-block w-100"
-            height="600"
-            src={img1}
-            alt="First slide"
+            className="w-100 rounded"
+            height="400px"
+            src={"https://i.ibb.co/bLm9Qnp/Islam1.jpg"}
+            alt=""
           />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img
-            className="d-block w-100"
-            height="600px"
-            src={img2}
-            alt="Second slide"
-          />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            height="600px"
-            src={img3}
-            alt="Third slide"
-          />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+        </div>
+        <div>
+          <h4 className="text-primary mb-5">Dr Darudul Islam</h4>
+          <h5 className="text-primary mb-2">SPECIALTY</h5>
+          <p className="h6 mb-5">Orthopaedic Surgery</p>
+          <h4 className="text-primary mb-2">SUB SPECIALTY</h4>
+          <p className="h6 mb-5">Orthopaedic Surgery - Spine</p>
+          <button className="border-0 bg-success text-white fw-bold p-2 rounded-pill px-4">
+            BOOK AN APPOINTMENT
+          </button>
+        </div>
+      </div>
+      <div className="container">
+        <hr />
+      </div>
+
+      <div className="describes container mt-5 ">
+        <div>
+          <h5 className="text-primary fw-bold">HOSPITALS</h5>
+          <p className="text-primary">Pantai Hospital Kuala Lumpur</p>
+          <p>No. A208 - Spine & Joint Centre, 2nd Floor, Block A,</p>
+          <p>8, Jalan Bukit Pantai 59100 Kuala Lumpur, Malaysia</p>
+          <p>+603-22960416 Ext. 2416</p>
+          <p>+603-22960422 Ext. 2422</p>
+        </div>
+        <div>
+          <h5 className="text-primary fw-bold">QUALIFICATIONS</h5>
+          <p>MCh Orth (Liverpool), FRCS (Edin)</p>
+        </div>
+        <div>
+          <h5 className="text-primary fw-bold">LANGUAGE SPOKEN</h5>
+          <p>English, Bangla</p>
+        </div>
+      </div>
+      <div className="container">
+        <hr />
+      </div>
     </div>
   );
 };

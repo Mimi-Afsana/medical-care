@@ -9,6 +9,8 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import Loading from "../../Loading/Loading";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -22,7 +24,7 @@ const Login = () => {
   const resetpass = async (event) => {
     setEmail(event.target.value);
     await sendPasswordResetEmail(email);
-    alert("sent email");
+    toast("sent email");
   };
 
   const location = useLocation();
@@ -90,10 +92,6 @@ const Login = () => {
         Forget Password?
         <button
           onClick={resetpass}
-          // onClick={async () => {
-          //   await sendPasswordResetEmail(email);
-          //   alert("Sent email");
-          // }}
           className="btn btn-link text-primary text-decoration-none"
         >
           {" "}
@@ -101,6 +99,7 @@ const Login = () => {
         </button>
       </p>
       <SocialLogin></SocialLogin>
+      <ToastContainer />
     </div>
   );
 };

@@ -23,8 +23,8 @@ const Header = () => {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand className="d-flex align-items-center me-5" href="#home">
-            Darudul Islam
+          <Navbar.Brand className="d-flex align-items-center me-5 fw-bold" href="#home">
+            MEDICAL HOSPITAL
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

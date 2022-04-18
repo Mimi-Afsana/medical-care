@@ -1,6 +1,6 @@
 .about-me {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
-  margin-left: 20px;
+  grid-gap: 100px;
+ 
 }

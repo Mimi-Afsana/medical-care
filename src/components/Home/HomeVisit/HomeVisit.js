@@ -2,14 +2,14 @@ import React from "react";
 import "./HomeVisit.css";
 const HomeVisit = () => {
   return (
-    <div className=" grid-doctor">
+    <div className=" grid-doctor container">
       <div>
         <img
-          className="mt-5"
+          className="mt-2 rounded-circle"
           src={"https://i.ibb.co/w7zvz5z/home-visit.jpg"}
           alt=""
-          width="900px"
-          height="450px"
+          width="600px"
+          height="600px"
         />
       </div>
       <div className="mt-5 ">
@@ -29,8 +29,8 @@ const HomeVisit = () => {
 
         <h4>Scheduling and Pricing:</h4>
         <small>(Requests made between)</small>
-        <h4>8 pm – 12 pm - TK 2000 </h4>
-        <h4>8 pm – 10 pm - TK 1000</h4>
+        <h4>8 pm – 12 pm - Price: $50 </h4>
+        <h4>8 pm – 10 pm - Price: $100</h4>
         <p>Available only Saturday and Sunday</p>
         <button className="bg-success text-white border-0 rounded-pill fw-bold px-5">
           <img

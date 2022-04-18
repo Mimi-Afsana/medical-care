@@ -2,19 +2,19 @@ import React from "react";
 import "./About.css";
 const About = () => {
   return (
-    <div>
-      <h2 className="text-center mt-5 mb-5">Darudul Islam</h2>
-      <div className="about-me mt-4">
+    <div className="container mt-5">
+      <div className="about-me">
         <div>
           <img
-            src={"https://i.ibb.co/w7zvz5z/home-visit.jpg"}
+            src={"https://i.ibb.co/bLm9Qnp/Islam1.jpg"}
             alt=""
-            width="800px"
-            height="450px"
+            className="w-100 rounded-circle"
+            height="500px"
           />
         </div>
         <div>
           <div>
+            <h2 className="mt-5 mb-5">Darudul Islam</h2>
             <h4 className="text-primary">About my goal</h4>
             <p>ghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
           </div>
