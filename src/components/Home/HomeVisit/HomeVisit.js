@@ -5,11 +5,11 @@ const HomeVisit = () => {
     <div className=" grid-doctor container">
       <div>
         <img
-          className="mt-2 rounded-circle"
+          className="first-img mt-4 rounded-circle"
           src={"https://i.ibb.co/w7zvz5z/home-visit.jpg"}
           alt=""
-          width="600px"
-          height="600px"
+          width="500px"
+          height="500px"
         />
       </div>
       <div className="mt-5 ">

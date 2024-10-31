@@ -1,14 +1,13 @@
 import { signOut } from "@firebase/auth";
 import React from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 import CustomLink from "../../CustomLink/CustomLink";
 import auth from "../../firebase.init";
-import logo from "../../images/logo.jpg";
 const Header = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const logout = () => {
     signOut(auth);
   };
@@ -42,13 +41,13 @@ const Header = () => {
               <Nav.Link className="text-white" as={CustomLink} to="/contact">
                 Contact Me
               </Nav.Link>
-              
+
             </Nav>
             <p className="text-white me-4 mt-3">{user?.email}</p>
-            <Nav className="bg-warning  fw-bold border-0 rounded-pill px-3">
+            <Nav className="bg-warning fw-bold rounded-pill px-3">
               {user ? (
                 <button
-                  className="bg-warning  fw-bold border-0 rounded-pill px-3"
+                  className="bg-warning fw-bold rounded-pill px-3 py-2"
                   onClick={logout}
                 >
                   Sign out{" "}

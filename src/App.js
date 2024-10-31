@@ -5,7 +5,6 @@ import Blogs from "./components/Blogs/Blogs";
 import CheckOut from "./components/CheckOut/CheckOut";
 import Contact from "./components/Contact/Contact";
 import Home from "./components/Home/Home";
-import Service from "./components/Home/Service/Service";
 import NotFound from "./components/NotFound/NotFound";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
 import Fotter from "./fixedpagecomponent/Fotter/Fotter";

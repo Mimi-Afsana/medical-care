@@ -2,20 +2,20 @@ import React from "react";
 import { useNavigate } from "react-router";
 
 const Service = ({ service }) => {
-  const { name, picture, about, balance, id } = service;
+  const { name, picture, about, balance } = service;
   const navigate = useNavigate();
   const sendCheckOut = () => {
     navigate("/checkout");
   };
   return (
     <div className="gx-4 col-12 col-lg-4 ">
-      <div className="card">
+      <div className="card p-4">
         <img
           src={picture}
-          className="card-img-top"
+          className="card-img-top rounded"
           alt="..."
           height="300px"
-          className=" rounded"
+
         />
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
@@ -25,7 +25,7 @@ const Service = ({ service }) => {
           </p>
           <button
             onClick={sendCheckOut}
-            className="bg-success text-white border-0 rounded-pill fw-bold px-5 py-3"
+            className="bg-success text-white border-0 rounded-pill fw-bold px-4 py-2"
           >
             Check Out
           </button>
