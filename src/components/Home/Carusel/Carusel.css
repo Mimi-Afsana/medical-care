@@ -3,18 +3,23 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 80px;
 }
+
 .describes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+
 @media screen and (max-width: 576px) {
   .describe {
     grid-template-columns: repeat(1, 1fr);
+    gap: 5px
   }
+
   .describe img {
     width: 100%;
   }
+
   .describes {
     grid-template-columns: repeat(1, 1fr);
   }

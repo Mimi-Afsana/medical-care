@@ -20,7 +20,7 @@ const Carusel = () => {
           <p className="h6 mb-5">Orthopaedic Surgery</p>
           <h4 className="text-primary mb-2">SUB SPECIALTY</h4>
           <p className="h6 mb-5">Orthopaedic Surgery - Spine</p>
-          <button className="border-0 bg-success text-white fw-bold p-2 rounded-pill px-4">
+          <button className="border-0 bg-success text-white fw-bold p-2 rounded px-4">
             BOOK AN APPOINTMENT
           </button>
         </div>
