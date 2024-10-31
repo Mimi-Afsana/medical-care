@@ -4,59 +4,68 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const submitForm = async () => {
-    toast("Thank for yoru quiry. We will get back to you soon.");
+    toast("Thank you for your inquiry. We will get back to you soon.");
   };
+
   return (
-    <div className="w-50 mx-auto mt-5">
+    <div className="container col-lg-6 col-md-8 col-sm-10 col-12 mx-auto mt-5">
       <div className="mb-3">
-        <label for="exampleFormControlInput1" className="form-label">
-          Your name
+        <label htmlFor="nameInput" className="form-label">
+          Your Name
         </label>
         <input
           type="text"
           className="form-control"
-          id="exampleFormControlInput1"
+          id="nameInput"
           placeholder="Enter your name"
         />
       </div>
+
       <div className="mb-3">
-        <label for="exampleFormControlInput1" className="form-label">
-          Email address
+        <label htmlFor="emailInput" className="form-label">
+          Email Address
         </label>
         <input
           type="email"
           className="form-control"
-          id="exampleFormControlInput1"
+          id="emailInput"
           placeholder="name@example.com"
         />
       </div>
+
       <div className="mb-3">
-        <label for="exampleFormControlInput1" className="form-label">
+        <label htmlFor="phoneInput" className="form-label">
           Phone
         </label>
         <input
           type="tel"
           className="form-control"
-          id="exampleFormControlInput1"
-          placeholder="Enter your cantact number"
+          id="phoneInput"
+          placeholder="Enter your contact number"
         />
       </div>
+
       <div className="mb-3">
-        <label for="exampleFormControlTextarea1" className="form-label">
+        <label htmlFor="messageTextarea" className="form-label">
           Message
         </label>
         <textarea
           className="form-control"
-          id="exampleFormControlTextarea1"
+          id="messageTextarea"
           rows="3"
+          placeholder="Enter your message here"
         ></textarea>
       </div>
-      <button
-        onClick={submitForm}
-        className="border-0 bg-success text-white px-5 py-2 rounded-pill fw-bold"
-      >
-        Submit
-      </button>
+
+      <div className="d-flex ">
+        <button
+          onClick={submitForm}
+          className="border-0 bg-success text-white px-4 py-2 rounded fw-bold"
+        >
+          Submit
+        </button>
+      </div>
+
       <ToastContainer />
     </div>
   );

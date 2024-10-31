@@ -8,13 +8,13 @@ const Service = ({ service }) => {
     navigate("/checkout");
   };
   return (
-    <div className="gx-4 col-12 col-lg-4 ">
-      <div className="card p-4">
+    <div className="g-4 col-12 col-lg-4 ">
+      <div className="card px-4 pt-4">
         <img
           src={picture}
           className="card-img-top rounded"
           alt="..."
-          height="300px"
+          height="260px"
 
         />
         <div className="card-body">

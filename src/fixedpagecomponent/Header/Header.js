@@ -44,17 +44,17 @@ const Header = () => {
 
             </Nav>
             <p className="text-white me-4 mt-3">{user?.email}</p>
-            <Nav className="bg-warning fw-bold rounded-pill px-3">
+            <Nav className="bg-warning fw-bold rounded-pill px-3 d-inline-flex align-items-center">
               {user ? (
                 <button
-                  className="bg-warning fw-bold rounded-pill px-3 py-2"
+                  className="bg-warning fw-bold border-0 rounded-pill px-2 py-1 d-inline-block w-auto"
                   onClick={logout}
                 >
-                  Sign out{" "}
+                  Sign out
                 </button>
               ) : (
                 <Nav.Link
-                  className="text-primary"
+                  className="text-primary d-inline-block w-auto mx-4"
                   eventKey={2}
                   as={Link}
                   to="/login"
@@ -63,6 +63,9 @@ const Header = () => {
                 </Nav.Link>
               )}
             </Nav>
+
+
+
           </Navbar.Collapse>
         </Container>
       </Navbar>

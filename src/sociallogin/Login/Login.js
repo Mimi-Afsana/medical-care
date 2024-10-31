@@ -12,7 +12,6 @@ import Loading from "../../Loading/Loading";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -20,15 +19,15 @@ const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
-  const [sendPasswordResetEmail, sending, erroring] =
-    useSendPasswordResetEmail(auth);
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+
   const resetpass = async (event) => {
     setEmail(event.target.value);
     if (email) {
       await sendPasswordResetEmail(email);
       toast("Sent email");
     } else {
-      toast("please enter your email address");
+      toast("Please enter your email address");
     }
   };
 
@@ -40,7 +39,7 @@ const Login = () => {
   }
 
   if (loading) {
-    return <Loading></Loading>;
+    return <Loading />;
   }
 
   let errorElement;
@@ -58,12 +57,15 @@ const Login = () => {
     event.preventDefault();
     signInWithEmailAndPassword(email, password);
   };
+
   return (
-    <div className="container w-50 mx-auto col-12">
+    <div className="container col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
       <Form
         onSubmit={handleRegister}
-        className="p-5 rounded mt-5 bg-success p-2 text-dark bg-opacity-10"
+        className="p-4 p-sm-5 rounded mt-4 bg-success bg-opacity-10"
       >
+        <h3 className="text-center mb-4">Login</h3>
+
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
@@ -73,6 +75,7 @@ const Login = () => {
             required
           />
         </Form.Group>
+
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
@@ -82,28 +85,39 @@ const Login = () => {
             required
           />
         </Form.Group>
+
         {errorElement}
-        <Button variant="primary" type="submit">
+
+        <Button
+          variant="primary"
+          type="submit"
+          className="w-100 mb-3 py-2"
+        >
           Login
-        </Button>{" "}
+        </Button>
       </Form>
-      <p className="mt-4 ">
+
+      <p className="mt-4 text-center">
         New to Come here?{" "}
-        <Link to="/signup" className="text-primary  text-decoration-none ">
-          Please SignUp
-        </Link>{" "}
+        <Link to="/signup" className="text-primary text-decoration-none">
+          Please Sign Up
+        </Link>
       </p>
-      <p>
-        Forget Password?
+
+      <p className="text-center">
+        Forgot Password?{" "}
         <button
           onClick={resetpass}
           className="btn btn-link text-primary text-decoration-none"
         >
-          {" "}
           Reset Password
         </button>
       </p>
-      <SocialLogin></SocialLogin>
+
+      <div className="d-flex justify-content-center">
+        <SocialLogin />
+      </div>
+
       <ToastContainer />
     </div>
   );

@@ -1,15 +1,11 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
-import {
-  useCreateUserWithEmailAndPassword,
-  useUpdateProfile,
-} from "react-firebase-hooks/auth";
+import { Form } from "react-bootstrap";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../../Loading/Loading";
 import SocialLogin from "../Social Login/SocialLogin";
 import { useNavigate } from "react-router";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "@firebase/auth";
 
 const Signup = () => {
@@ -22,16 +18,16 @@ const Signup = () => {
   const navigateLogin = () => {
     navigate("/login");
   };
-  const [user1, loading1] = useAuthState(auth);
+
   const logout = () => {
     signOut(auth);
   };
 
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword, user, loading] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   if (loading) {
-    return <Loading></Loading>;
+    return <Loading />;
   }
   if (user) {
     console.log("user", user);
@@ -51,7 +47,7 @@ const Signup = () => {
   const handleRegister = (event) => {
     event.preventDefault();
     if (password !== confirmPassword) {
-      setErrors(" Passwords did't match");
+      setErrors(" Passwords didn't match");
       return;
     }
     if (password.length < 6) {
@@ -60,12 +56,15 @@ const Signup = () => {
     }
     createUserWithEmailAndPassword(email, password);
   };
+
   return (
-    <div>
+    <div className="container col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
       <Form
         onSubmit={handleRegister}
-        className="w-50 mx-auto p-5 rounded mt-5 bg-success p-2 text-dark bg-opacity-10 "
+        className="p-4 p-sm-5 rounded mt-4 bg-success bg-opacity-10"
       >
+        <h3 className="text-center mb-4">Sign Up</h3>
+
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
@@ -76,6 +75,7 @@ const Signup = () => {
             required
           />
         </Form.Group>
+
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
@@ -86,47 +86,51 @@ const Signup = () => {
             required
           />
         </Form.Group>
+
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Confirm Password</Form.Label>
           <Form.Control
             onBlur={confirmPasswordBlur}
             type="password"
-            name="password"
+            name="confirmPassword"
             placeholder="Confirm Password"
             required
           />
         </Form.Group>
+
         <p className="text-danger">{errors}</p>
+
         {user ? (
           <button
-            className="bg-warning  fw-bold border-0 rounded-pill px-3"
+            className="bg-warning fw-bold border-0 rounded-pill px-3 w-100 mb-3"
             onClick={logout}
           >
             Sign out
           </button>
         ) : (
           <button
-            className="bg-primary text-white  fw-bold border-0 rounded-pill px-4 py-2"
-            eventKey={2}
-            as={Link}
-            to="/home"
+            className="bg-primary text-white fw-bold border-0 rounded px-4 py-2 w-100 mb-3"
+            type="submit"
           >
-            signup
+            Sign Up
           </button>
         )}
-        <p className="mt-4">
-          If sign up already?{" "}
+
+        <p className="mt-3 text-center">
+          Already have an account?{" "}
           <Link
             to="/login"
-            className="text-primary pe-auto text-decoration-none"
+            className="text-primary text-decoration-none"
             onClick={navigateLogin}
           >
-            Please Login
-          </Link>{" "}
+            Login
+          </Link>
         </p>
       </Form>
 
-      <SocialLogin></SocialLogin>
+      <div className="d-flex justify-content-center mt-3">
+        <SocialLogin />
+      </div>
     </div>
   );
 };
